@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=bazzite
+ARG BASE_IMAGE=silverblue-main
 FROM ghcr.io/ublue-os/${BASE_IMAGE}:latest
 
 COPY build.sh /tmp/build.sh

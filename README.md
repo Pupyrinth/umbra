@@ -5,5 +5,5 @@
 From Bazzite:
 ```bash
 # Plasma 
-sudo bootc switch ghcr.io/Aethrexal/umbra:latest 
+sudo bootc switch ghcr.io/aethrexal/umbra:latest 
 ```
