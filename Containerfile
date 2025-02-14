@@ -9,6 +9,5 @@ COPY files/shared /
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
     /tmp/packages.sh && \
-    echo "umbra" >> /usr/share/umbra/image_name && \
     ostree container commit
     
