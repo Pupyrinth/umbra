@@ -11,7 +11,7 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 #dnf install -y konsole
-dnf group install -y kde-desktop-environment
+rpm-ostree install kde-desktop-environment
 
 # Use a COPR Example:
 #
