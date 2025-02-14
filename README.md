@@ -1,5 +1,7 @@
 # Umbra
 
+If you gonna use this atm, don't lmao.
+
 ### Rebase
 
 From Bazzite:
