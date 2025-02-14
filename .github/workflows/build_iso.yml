@@ -53,7 +53,7 @@ jobs:
         id: generate-flatpak-dir-shortname
         shell: bash
         run: |
-          FLATPAK_DIR_SHORTNAME="installer/kde_flatpaks"
+          FLATPAK_DIR_SHORTNAME="installer/shared_flatpaks"
 
           if [[ "${{ matrix.image_name }}" =~ "gnome" ]]; then
             FLATPAK_DIR_SHORTNAME="installer/gnome_flatpaks"
