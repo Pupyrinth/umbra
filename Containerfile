@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=silverblue-main
+ARG BASE_IMAGE=kinote-main
 FROM ghcr.io/ublue-os/${BASE_IMAGE}:latest
 
 COPY build.sh /tmp/build.sh
