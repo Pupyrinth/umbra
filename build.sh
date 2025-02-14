@@ -11,7 +11,6 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 #dnf install -y konsole
-rpm-ostree override remove firefox-langpacks-*.x86_64 firefox
 
 # Use a COPR Example:
 #

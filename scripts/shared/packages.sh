@@ -9,7 +9,7 @@ wget -O vesktop.rpm https://vencord.dev/download/vesktop/amd64/rpm
 
 rpm-ostree install virt-manager virt-install libvirt-daemon-config-network libvirt-daemon-kvm qemu-kvm virt-viewer libguestfs-tools python3-libguestfs virt-top swtpm edk2-ovmf fastfetch nvtop btop zsh zoxide fzf java-latest-openjdk.x86_64 code kitty flatpak fedora-flathub-remote
 
-#dnf install -y vesktop.rpm
+rpm-ostree install vesktop.rpm
 
 rm vesktop.rpm
 
