@@ -11,5 +11,5 @@ COPY files/kinoite /
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/shared-build.sh && \
     /tmp/build.sh && \
-    echo "umbra" >> /usr/share/horizon/image_type && \
+    echo "umbra" >> /usr/share/umbra/image_type && \
     ostree container commit
