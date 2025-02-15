@@ -1,4 +1,4 @@
-<img src="/repo_content/icon.png" width="150">
+<img src="/icon.png" width="150">
 # Umbra
 
 If you gonna use this atm, don't lmao.
