@@ -1,7 +1,9 @@
-<div>
-  <img src="/icon.png" width="150"/>
-  <h1>Umbra</h1>
-</div>
+<h1 align="center" style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+  <img src="/icon.png" 
+       alt="Umbra Logo" 
+       style="width: 50px; height: 50px;">
+  Umbra
+</h1>
 
 If you gonna use this atm, don't lmao.
 
