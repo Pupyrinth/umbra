@@ -10,5 +10,4 @@ COPY files/shared /
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
     /tmp/packages.sh && \
-    ln -s /usr/lib/os-release /etc/os-release && \
     ostree container commit
