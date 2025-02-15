@@ -32,8 +32,3 @@ fix-discord-flatpak-rpc:
     mkdir -pv ~/.config/autostart
 
     echo -e "[Desktop Entry]\nCategories=Utility;\nComment=Symlink for Discord RPC\nIcon=discord\nName=DiscordRPC\nStartupNotify=true\nTerminal=false\nType=Application\nExec=ln -s /run/user/1000/.flatpak/com.discordapp.Discord/xdg-run/discord-ipc-0 /run/user/1000/discord-ipc-0" >> ~/.config/autostart/discord-rpc.desktop
-
-# Install Nix using the DeterminateSystems nix-installer
-install-nix:
-    curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | \
-        sh -s -- install
