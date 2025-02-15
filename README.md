@@ -1,4 +1,4 @@
-<img src="/icon.png" width="150">
+<img src="/logo.png" width="100">
 
 # Umbra
 
