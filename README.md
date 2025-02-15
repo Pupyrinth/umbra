@@ -1,5 +1,7 @@
-<img src="/icon.png" width="150">
-# Umbra
+<div>
+  <img src="/icon.png" width="150"/>
+  <h1>Umbra</h1>
+</div>
 
 If you gonna use this atm, don't lmao.
 
