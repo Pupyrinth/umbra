@@ -1,7 +1,7 @@
-<h1 align="center" style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+<h1>
   <img src="/icon.png" 
        alt="Umbra Logo" 
-       style="width: 50px; height: 50px;">
+       style="width: 150px; height: 150px;">
   Umbra
 </h1>
 
