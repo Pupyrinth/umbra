@@ -1,9 +1,6 @@
-<h1>
-  <img src="/icon.png" 
-       alt="Umbra Logo" 
-       style="width: 150px; height: 150px;">
-  Umbra
-</h1>
+<img src="/icon.png" width="150">
+
+# Umbra
 
 If you gonna use this atm, don't lmao.
 
