@@ -71,7 +71,9 @@ fi
 
 xargs -a /usr/share/umbra/packages/flatpaks flatpak install flathub  --system -y
 
-if grep -q "umbra-niri" /usr/share/umbra/image_name; then
+if grep -q "kinoite" /usr/share/umbra/image_type; then
+    xargs -a /usr/share/umbra/kinoite/packages/flatpaks_remove flatpak remove -y
+elif grep -q "niri" /usr/share/umbra/image_name; then
     xargs -a /usr/share/umbra/niri/packages/flatpaks flatpak install flathub  --system -y
 fi
 #elif grep -q "plasma" /usr/share/horizon/image_type; then
