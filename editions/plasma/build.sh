@@ -19,3 +19,4 @@ dnf5 install -y plasma-desktop plasma-workspace plasma-workspace-wallpapers plas
 
 #### Example for enabling a System Unit File
 systemctl enable sddm
+systemctl disable systemd-remount-fs.service
