@@ -1,6 +1,6 @@
-<img src="/watermark.png" width="200">
+<img src="/watermark.png" width="600">
 
-# Umbra
+---
 
 If you gonna use this atm, don't lmao.
 
