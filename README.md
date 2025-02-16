@@ -1,4 +1,6 @@
-<img src="assets/umbra_slogan1.png" width="400">
+<p align="center">
+  <img src="assets/umbra_slogan1.png" width="500">
+</p>
 
 ---
 
