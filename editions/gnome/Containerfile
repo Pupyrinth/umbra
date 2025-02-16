@@ -4,13 +4,13 @@
 FROM quay.io/fedora/fedora-bootc:latest
 
 COPY scripts/shared/build.sh /tmp/shared-build.sh
-COPY editions/plasma/build.sh /tmp/build.sh
+COPY editions/gnome/build.sh /tmp/build.sh
 
 COPY files/shared /
-COPY files/plasma /
+COPY files/gnome /
 
 RUN mkdir -p /var/lib/alternatives && \
+    echo "gnome" >> /usr/share/umbra/image_type && \
     /tmp/shared-build.sh && \
     /tmp/build.sh && \
-    echo "plasma" >> /usr/share/umbra/image_type && \
     ostree container commit
