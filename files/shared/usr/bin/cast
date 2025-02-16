@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-/usr/bin/just --justfile /usr/share/cast/justfile $1
+/usr/bin/just --justfile /usr/share/umbra/cast/justfile $1

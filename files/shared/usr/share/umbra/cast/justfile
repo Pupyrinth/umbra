@@ -3,7 +3,7 @@ set ignore-comments := true
 
 _default:
     #!/usr/bin/bash
-    source /usr/lib/ujust/libformatting.sh
+    #source /usr/lib/ujust/libformatting.sh
 
     just --justfile justfile --list --list-heading $'Available commands:\n' --list-prefix $' - '
 
@@ -11,3 +11,4 @@ _default:
 
 # Imports
 import "./justfiles/00-default.just"
+import "./justfiles/10-fixes.just"
