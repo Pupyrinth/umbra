@@ -1,4 +1,4 @@
-<img src="/umbra.png" width="100">
+<img src="/umbra.png" width="400">
 
 ---
 

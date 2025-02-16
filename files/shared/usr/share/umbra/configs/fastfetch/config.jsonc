@@ -8,7 +8,7 @@
   },
 
   "logo": {
-    "source": "/usr/share/umbra/fastfetch/ascii-art"
+    "source": "/usr/share/umbra/configs/fastfetch/ascii-art"
   },
 
   "modules": [
