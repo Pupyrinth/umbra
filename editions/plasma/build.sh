@@ -18,4 +18,4 @@ dnf5 install -y plasma-desktop plasma-workspace plasma-workspace-wallpapers plas
 # dnf5 -y copr disable ublue-os/staging
 
 #### Example for enabling a System Unit File
-systemctl enable display-manager.service
+#systemctl enable display-manager.service
