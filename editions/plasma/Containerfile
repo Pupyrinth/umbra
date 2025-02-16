@@ -1,15 +1,16 @@
 #ARG BASE_IMAGE=kinoite-main
 #FROM ghcr.io/ublue-os/${BASE_IMAGE}:latest
-FROM quay.io/fedora-ostree-desktops/kinoite:41
+#FROM quay.io/fedora-ostree-desktops/kinoite:41
+FROM quay.io/fedora/fedora-bootc:41
 
 COPY scripts/shared/build.sh /tmp/shared-build.sh
-COPY editions/kinoite/build.sh /tmp/build.sh
+COPY editions/plasma/build.sh /tmp/build.sh
 
 COPY files/shared /
-COPY files/kinoite /
+COPY files/plasma /
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/shared-build.sh && \
     /tmp/build.sh && \
-    echo "kinoite" >> /usr/share/umbra/image_type && \
+    echo "plasma" >> /usr/share/umbra/image_type && \
     ostree container commit
