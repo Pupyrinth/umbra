@@ -72,7 +72,18 @@ fi
 xargs -a /usr/share/umbra/packages/flatpaks flatpak install flathub  --system -y
 
 if grep -q "kinoite" /usr/share/umbra/image_type; then
-    xargs -a /usr/share/umbra/kinoite/packages/flatpaks_remove flatpak remove -y
+  flatpaks_to_remove="/usr/share/umbra/packages/kinoite/packages/flatpaks_remove"
+
+  #xargs -a /usr/share/umbra/packages/kinoite_flatpaks flatpak install flathub  --system -y
+
+  while IFS= read -r app; do
+      if flatpak list --app | awk '{print $1}' | grep -qx "$app"; then
+          echo "Removing $app..."
+          flatpak remove -y --system "$app"
+      else
+          echo "$app is not installed, skipping..."
+      fi
+  done < "$flatpaks_to_remove"
 elif grep -q "niri" /usr/share/umbra/image_name; then
     xargs -a /usr/share/umbra/niri/packages/flatpaks flatpak install flathub  --system -y
 fi
