@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-image_type=$(cat /usr/share/nova/image_type)
+image_type=$(cat /usr/share/umbra/image_type)
 
 if grep -q "plasma" /usr/share/umbra/image_type; then
     konsoleprofile ColorScheme='Ashy Decay'

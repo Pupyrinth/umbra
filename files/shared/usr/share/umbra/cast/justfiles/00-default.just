@@ -10,7 +10,7 @@ bios:
 alias upgrade := update
 
 update:
-    /usr/bin/umbra-update
+    /usr/bin/umbra-update true
 
 # Clean up old up unused podman images, volumes, flatpak packages and rpm-ostree content
 clean-system:

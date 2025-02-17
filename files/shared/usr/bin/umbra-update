@@ -130,16 +130,18 @@ if command -v pnpm &> /dev/null; then
     fi
 fi
 
-status_report
+if [ "$1" = "true" ]; then
+    status_report
 
-echo -e "${BLUE}##########################################${NC}"
-read -p "Do you want to reboot now? (y/N): " choice
-choice="${choice,,}"  # Convert input to lowercase
+    echo -e "${BLUE}##########################################${NC}"
+    read -p "Do you want to reboot now? (y/N): " choice
+    choice="${choice,,}"  # Convert input to lowercase
 
-if [[ "$choice" =~ ^(y|yes)$ ]]; then
-    echo "Rebooting system..."
-    sudo systemctl reboot
-else
-    echo
-    echo -e "${CYAN}Reboot skipped. Changes may require restart.${NC}"
+    if [[ "$choice" =~ ^(y|yes)$ ]]; then
+        echo "Rebooting system..."
+        sudo systemctl reboot
+    else
+        echo
+        echo -e "${CYAN}Reboot skipped. Changes may require restart.${NC}"
+    fi
 fi
