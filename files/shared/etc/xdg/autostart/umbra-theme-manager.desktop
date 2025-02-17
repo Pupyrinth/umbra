@@ -1,4 +1,5 @@
 [Desktop Entry]
 Type=Application
 Name=Umbra Theme Manager
-Exec=/usr/bin/systemctl --user enable umbra-theme-manager
+Exec=/usr/libexec/umbra-theme-manager
+#Exec=/usr/bin/systemctl --user enable umbra-theme-manager
