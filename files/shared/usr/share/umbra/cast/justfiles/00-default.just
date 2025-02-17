@@ -1,3 +1,5 @@
+set quiet := true
+
 # Boot into this device's BIOS/UEFI screen
 bios:
     #!/usr/bin/bash
