@@ -1,5 +1,3 @@
-set quiet := true
-
 # Boot into this device's BIOS/UEFI screen
 bios:
     #!/usr/bin/bash
@@ -12,7 +10,8 @@ bios:
 alias upgrade := update
 
 update:
-    /usr/bin/umbra-update true
+    #!/usr/bin/bash
+    umbra-update
 
 # Clean up old up unused podman images, volumes, flatpak packages and rpm-ostree content
 clean-system:
