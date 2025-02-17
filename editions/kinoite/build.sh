@@ -9,6 +9,8 @@ set -ouex pipefail
 
 dnf5 install -y kate
 
+dnf5 remove -y firefox firefox-langpacks
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
