@@ -4,13 +4,13 @@
 FROM ghcr.io/alxhr0/horizon-base:latest
 
 COPY scripts/shared/build.sh /tmp/shared-build.sh
-COPY editions/kinoite/build.sh /tmp/build.sh
+COPY editions/plasma/build.sh /tmp/build.sh
 
 COPY files/shared /
-COPY files/kinoite /
+COPY files/plasma /
 
 RUN mkdir -p /var/lib/alternatives && \
-    echo "kinoite" >> /usr/share/umbra/image_type && \
+    echo "plasma" >> /usr/share/umbra/image_type && \
     /tmp/shared-build.sh && \
     /tmp/build.sh && \
     ostree container commit
