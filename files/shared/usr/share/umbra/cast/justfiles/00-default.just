@@ -10,9 +10,7 @@ bios:
 alias upgrade := update
 
 update:
-    flatpak update -y
-    sudo bootc upgrade
-    echo "Please reboot your system (if bootc did update something)"
+    /usr/bin/umbra-update
 
 # Clean up old up unused podman images, volumes, flatpak packages and rpm-ostree content
 clean-system:

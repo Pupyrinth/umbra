@@ -1,0 +1,4 @@
+[Desktop Entry]
+Comment[en_US]=
+Comment=
+Exec=/usr/bin/systemctl --user enable umbra-theme-manager
