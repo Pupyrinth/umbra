@@ -11,7 +11,7 @@ alias upgrade := update
 
 update:
     #!/usr/bin/bash
-    umbra-update
+    umbra-update true
 
 # Clean up old up unused podman images, volumes, flatpak packages and rpm-ostree content
 clean-system:

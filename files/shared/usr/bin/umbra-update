@@ -130,6 +130,8 @@ if command -v pnpm &> /dev/null; then
     fi
 fi
 
+notify-send --urgency=normal --expire-time=500 --icon=/usr/share/umbra/pixmaps/system-logo-white.png --category=system "Umbra Update" "System finished updating"
+
 if [ "$1" = "true" ]; then
     status_report
 
