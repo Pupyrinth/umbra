@@ -30,22 +30,19 @@ status_report() {
     echo
 }
 
-header "BASE IMAGE"
-
-if sudo bootc upgrade; then
-    echo
-    echo -e "${GREEN}✓ Base image updated successfully${NC}"
-    section_status["base_image"]="${GREEN}SUCCESS${NC}"
-
-
-    notify-send --urgency=normal --expire-time=10000 --icon=system-logo-white --category=system "Umbra Update" "Base Image finished updating"
-else
-    echo
-    echo -e "${RED}✗ Failed to update base image${NC}"
-    section_status["base_image"]="${RED}FAILED${NC}"
-fi
-
 if [ "$1" = "true" ]; then
+    header "BASE IMAGE"
+
+    if sudo bootc upgrade; then
+        echo
+        echo -e "${GREEN}✓ Base image updated successfully${NC}"
+        section_status["base_image"]="${GREEN}SUCCESS${NC}"
+    else
+        echo
+        echo -e "${RED}✗ Failed to update base image${NC}"
+        section_status["base_image"]="${RED}FAILED${NC}"
+    fi
+
     header "FLATPAKS"
 
     if flatpak update -y; then
@@ -146,5 +143,13 @@ if [ "$1" = "true" ]; then
     else
         echo
         echo -e "${CYAN}Reboot skipped. Changes may require restart.${NC}"
+    fi
+else
+    if bootc upgrade; then
+        echo
+        echo -e "${GREEN}✓ Base image updated successfully${NC}"
+    else
+        echo
+        echo -e "${RED}✗ Failed to update base image${NC}"
     fi
 fi
