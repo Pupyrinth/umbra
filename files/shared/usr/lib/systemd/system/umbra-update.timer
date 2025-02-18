@@ -3,9 +3,8 @@ Description=Auto Update System Timer For Umbra
 Wants=network-online.target
 
 [Timer]
-OnBootSec=2min
-OnUnitInactiveSec=2min
-#OnUnitInactiveSec=6h
+OnBootSec=20min
+OnUnitInactiveSec=6h
 Persistent=true
 
 [Install]

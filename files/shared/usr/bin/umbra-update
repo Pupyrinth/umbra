@@ -30,7 +30,7 @@ status_report() {
     echo
 }
 
-if [ "$1" = "true" ]; then
+if [ "$1" = "manual" ]; then
     header "BASE IMAGE"
 
     if sudo bootc upgrade; then
@@ -144,7 +144,7 @@ if [ "$1" = "true" ]; then
         echo
         echo -e "${CYAN}Reboot skipped. Changes may require restart.${NC}"
     fi
-else
+elif [ "$1" = "auto" ]; then
     if bootc upgrade; then
         echo
         echo -e "${GREEN}✓ Base image updated successfully${NC}"
