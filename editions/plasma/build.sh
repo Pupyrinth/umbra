@@ -8,4 +8,4 @@ dnf5 install -y plasma-desktop sddm sddm-kcm flatpak-kcm kde-connect sddm-waylan
 ### Remove packages
 dnf5 remove -y firefox firefox-langpacks
 
-systemctl enable --now sddm.service
+systemctl enable sddm.service
