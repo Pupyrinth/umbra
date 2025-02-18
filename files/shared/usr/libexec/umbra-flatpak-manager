@@ -86,4 +86,4 @@ elif grep -q "niri" /usr/share/umbra/image_name; then
     xargs -a /usr/share/umbra/niri/packages/flatpaks flatpak install flathub  --system -y
 fi
 
-systemctl disable --now umbra-flatpak-manager
+systemctl disable --now umbra-flatpak-manager.service

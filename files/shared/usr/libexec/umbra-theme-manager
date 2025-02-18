@@ -7,3 +7,5 @@ if grep -q "plasma" /usr/share/umbra/image_type; then
     plasma-apply-colorscheme AshyDecay
     plasma-apply-wallpaperimage /usr/share/umbra/wallpapers/tux.jpg
 fi
+
+systemctl disable --user umbra-flatpak-manager.service
