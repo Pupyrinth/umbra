@@ -9,3 +9,4 @@ dnf5 install -y plasma-desktop sddm sddm-kcm flatpak-kcm kde-connect sddm-waylan
 dnf5 remove -y firefox firefox-langpacks
 
 systemctl enable sddm-theme-fix.mount
+systemctl set-default graphical.target
