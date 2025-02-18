@@ -4,7 +4,8 @@ Wants=network-online.target
 
 [Timer]
 OnBootSec=2min
-OnUnitInactiveSec=6h
+OnUnitInactiveSec=2min
+#OnUnitInactiveSec=6h
 Persistent=true
 
 [Install]

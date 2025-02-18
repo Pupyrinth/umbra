@@ -32,5 +32,6 @@ dnf5 -y --setopt=install_weak_deps=False install steam gamemode lutris
 
 systemctl enable podman.socket
 systemctl enable libvirtd.service
+systemctl enable --now umbra-update.timer
 systemctl enable umbra-flatpak-manager.service
 systemctl --global enable umbra-theme-manager.service
