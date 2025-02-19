@@ -19,7 +19,7 @@ dnf5 copr -y enable sentry/kernel-blu
 
 dnf5 -y config-manager addrepo --from-repofile=https://negativo17.org/repos/fedora-steam.repo
 
-rpm-ostree override remove libavdevice-free ffmpeg-free libavcodec-free libavfilter-free libavformat-free libavutil-free libpostproc-free libswresample-free libswscale-free --install ffmpeg
+rpm-ostree override remove libavdevice-free libavcodec-free libavfilter-free libavformat-free libavutil-free libpostproc-free libswresample-free libswscale-free --install ffmpeg
 
 dnf5 install -y intel-media-driver
 
