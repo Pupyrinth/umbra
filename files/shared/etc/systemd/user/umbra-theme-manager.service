@@ -3,7 +3,7 @@ Description=Manage system theme
 
 [Service]
 Type=oneshot
-ExecStart=/usr/libexec/umbra-theme-manager
+ExecStart=nebula -t
 Restart=on-failure
 RestartSec=30
 StartLimitInterval=0

@@ -3,7 +3,7 @@ Description=Universal Blue Update Oneshot Service
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/umbra-update auto
+ExecStart=nebula -u
 Nice=19
 CPUSchedulingPolicy=batch
 IOSchedulingClass=best-effort
