@@ -1,3 +1,6 @@
+run-command COMMAND:
+    {{COMMAND}}
+
 test ARG:
   #!/usr/bin/bash
   source /usr/lib/ujust/ujust.sh
@@ -20,7 +23,10 @@ alias upgrade := update
 # Update system, flatpaks, and containers all at once
 update:
     #!/usr/bin/bash
+    # Update Flatpaks, Snaps and image
     sudo nebula -u
+    # Update Distrobox, Node and Python packages
+    nebula -u
 
 alias auto-update := toggle-updates
 
