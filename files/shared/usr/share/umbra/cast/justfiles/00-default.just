@@ -1,4 +1,4 @@
-test option:
+test <option>:
   #!/usr/bin/bash
   source /usr/lib/ujust/ujust.sh
   echo {{ option }}
