@@ -5,7 +5,7 @@ _default:
     #!/usr/bin/bash
     source /usr/lib/ujust/libformatting.sh
     #/usr/bin/just --justfile justfile --list --list-heading $'Available commands:\n' --list-prefix $' - '
-    /usr/bin/just --justfile justfile $1
+    /usr/bin/just --justfile /usr/share/umbra/cast/justfile $1
 
 
 
