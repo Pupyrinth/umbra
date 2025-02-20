@@ -1,4 +1,4 @@
-rustup:
+rustup ACTION="prompt":
   #!/usr/bin/bash
   source /usr/lib/ujust/ujust.sh
     CURRENT_STATE="Not Installed"
