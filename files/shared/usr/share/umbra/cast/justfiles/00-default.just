@@ -1,6 +1,6 @@
-test OPTION:
+test option:
   #!/usr/bin/bash
-  echo {{ OPTION }}
+  echo {{ option }}
 
 # Boot into this device's BIOS/UEFI screen
 bios:
