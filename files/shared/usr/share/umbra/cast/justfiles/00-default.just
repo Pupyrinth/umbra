@@ -1,7 +1,7 @@
 test ARG:
   #!/usr/bin/bash
   source /usr/lib/ujust/ujust.sh
-  echo {{ ARG }}
+  echo {{ARG}}
 
 bruh option:
   echo {{ option }}
