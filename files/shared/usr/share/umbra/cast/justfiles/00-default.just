@@ -1,5 +1,9 @@
 test option:
   #!/usr/bin/bash
+  source /usr/lib/ujust/ujust.sh
+  echo {{ option }}
+
+bruh option:
   echo {{ option }}
 
 # Boot into this device's BIOS/UEFI screen
