@@ -4,8 +4,7 @@ set ignore-comments := true
 _default:
     #!/usr/bin/bash
     source /usr/lib/ujust/libformatting.sh
-    #/usr/bin/just --justfile justfile --list --list-heading $'Available commands:\n' --list-prefix $' - '
-    /usr/bin/just --justfile /usr/share/umbra/cast/justfile $1
+    just --justfile justfile --list --list-heading $'Available commands:\n' --list-prefix $' - '
 
 
 
