@@ -29,7 +29,7 @@ rpm-ostree override replace --experimental --freeze --from repo='copr:copr.fedor
 
 dnf5 install -y virt-manager virt-install libvirt-daemon-config-network libvirt-daemon-kvm qemu-kvm virt-viewer libguestfs-tools python3-libguestfs virt-top swtpm edk2-ovmf nvtop zsh zoxide fzf java-latest-openjdk.x86_64 code kitty flatpak fedora-flathub-remote just nodejs pnpm gh vlc distrobox mangohud hourglass glibc-all-langpacks python3-pip google-noto-fonts-all gum
 
-dnf5 -y --setopt=install_weak_deps=False install steam gamemode lutris waydroid
+dnf5 -y --setopt=install_weak_deps=False install steam gamemode lutris waydroid bottles
 
 systemctl enable podman.socket
 systemctl enable libvirtd.service

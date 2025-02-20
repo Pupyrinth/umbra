@@ -25,7 +25,7 @@ concurrency:
 
 jobs:
   build_push:
-    if: "!contains(github.event.head_commit.message, '[testing]')"
+    if: "!contains(github.event.head_commit.message, '[no-build]')"
     name: Build and push image
     runs-on: ubuntu-24.04
 

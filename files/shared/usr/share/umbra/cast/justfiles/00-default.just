@@ -9,6 +9,7 @@ bios:
 
 alias upgrade := update
 
+# Update system, flatpaks, and containers all at once
 update:
     #!/usr/bin/bash
     sudo nebula -u
