@@ -1,14 +1,3 @@
-run-command COMMAND:
-    {{COMMAND}}
-
-test ARG:
-  #!/usr/bin/bash
-  source /usr/lib/ujust/ujust.sh
-  echo {{ARG}}
-
-bruh ARG:
-  echo {{ARG}}
-
 # Boot into this device's BIOS/UEFI screen
 bios:
     #!/usr/bin/bash
@@ -20,13 +9,30 @@ bios:
 
 alias upgrade := update
 
-# Update system, flatpaks, and containers all at once
-update:
+# Update user, system or both
+update choice="prompt":
     #!/usr/bin/bash
-    # Update Flatpaks, Snaps and image
-    sudo nebula -u
-    # Update Distrobox, Node and Python packages
-    nebula -u
+    OPTION={{ choice }}
+    if [ "${OPTION,,}" == "prompt" ]; then
+      echo "Update user, system or all?"
+      OPTION=$(ugum choose User System Both)
+    elif [ "${OPTION,,}" == "help" ]; then
+      echo "Usage: cast update <option>"
+      echo "  <option>: Specify the quick option - 'user' or 'system' or 'all'"
+      echo "  Use 'user' to Update Distrobox, Node and Python packages."
+      echo "  Use 'system' to Update Flatpaks, Snaps and Image."
+      echo "  Use 'both' to Update both User and System."
+      exit 0
+    fi
+
+    if [ "${OPTION,,}" == "user" ]; then
+      nebula -u
+    elif [ "${OPTION,,}" == "system" ]; then
+      sudo nebula -u
+    elif [ "${OPTION,,}" == "both" ]; then
+      sudo nebula -u
+      nebula -u
+    fi
 
 alias auto-update := toggle-updates
 
@@ -38,6 +44,7 @@ toggle-updates ACTION="prompt":
     if systemctl is-enabled umbra-update.timer | grep -q enabled; then
       CURRENT_STATE="Enabled"
     fi
+
     OPTION={{ ACTION }}
     if [ "$OPTION" == "prompt" ]; then
       echo "Automatic updates are currently: ${bold}${CURRENT_STATE}${normal}"
@@ -50,6 +57,7 @@ toggle-updates ACTION="prompt":
       echo "  Use 'disable' to Disable automatic updates."
       exit 0
     fi
+
     if [ "${OPTION,,}" == "enable" ]; then
       sudo systemctl enable umbra-update.timer
     elif [ "${OPTION,,}" == "disable" ]; then
