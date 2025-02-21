@@ -10,20 +10,9 @@ bios:
 alias upgrade := update
 
 # Update user, system or both
-update choice="prompt":
+update choice:
     #!/usr/bin/bash
     OPTION={{ choice }}
-    if [ "${OPTION,,}" == "prompt" ]; then
-      echo "Update user, system or all?"
-      OPTION=$(ugum choose User System Both)
-    elif [ "${OPTION,,}" == "help" ]; then
-      echo "Usage: cast update <option>"
-      echo "  <option>: Specify the quick option - 'user' or 'system' or 'all'"
-      echo "  Use 'user' to Update Distrobox, Node and Python packages."
-      echo "  Use 'system' to Update Flatpaks, Snaps and Image."
-      echo "  Use 'both' to Update both User and System."
-      exit 0
-    fi
 
     if [ "${OPTION,,}" == "user" ]; then
       nebula -u
@@ -32,6 +21,13 @@ update choice="prompt":
     elif [ "${OPTION,,}" == "both" ]; then
       sudo nebula -u
       nebula -u
+    else
+      echo "Usage: cast update <option>"
+      echo "  <option>: Specify the quick option - 'user' or 'system' or 'all'"
+      echo "  Use 'user' to Update Distrobox, Node and Python packages."
+      echo "  Use 'system' to Update Flatpaks, Snaps and Image."
+      echo "  Use 'both' to Update both User and System."
+      exit 0
     fi
 
 alias auto-update := toggle-updates
