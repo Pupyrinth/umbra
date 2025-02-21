@@ -22,7 +22,7 @@ rustup choice="prompt":
   fi
 
   if [ "${OPTION,,}" == "install" ]; then
-    if [ "${CURRENT_STATE}" == "Install" ]; then
+    if [ "${CURRENT_STATE}" == "Installed" ]; then
       echo "Rustup is already installed."
       exit 0
     else
