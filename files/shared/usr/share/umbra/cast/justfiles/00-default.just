@@ -12,6 +12,7 @@ alias upgrade := update
 # Update user, system or both
 update choice="":
     #!/usr/bin/bash
+    source /usr/lib/cast/cast.sh
     OPTION={{ choice }}
 
     if [ "${OPTION,,}" == "user" ]; then
@@ -22,7 +23,7 @@ update choice="":
       sudo nebula -u
       nebula -u
     else
-      echo "Usage: cast update <option>"
+      echo "${blue}Usage: cast update #{magenta}<option>${normal}"
       echo "  <option>: Specify the quick option - 'user' or 'system' or 'all'"
       echo "  Use 'user' to Update Distrobox, Node and Python packages."
       echo "  Use 'system' to Update Flatpaks, Snaps and Image."
@@ -35,7 +36,7 @@ alias auto-update := toggle-updates
 # Turn automatic updates on or off
 toggle-updates ACTION="prompt":
     #!/usr/bin/bash
-    source /usr/lib/ujust/ujust.sh
+    source /usr/lib/cast/cast.sh
     CURRENT_STATE="Disabled"
     if systemctl is-enabled umbra-update.timer | grep -q enabled; then
       CURRENT_STATE="Enabled"
@@ -47,7 +48,7 @@ toggle-updates ACTION="prompt":
       echo "Enable or Disable automatic updates?"
       OPTION=$(ugum choose Enable Disable)
     elif [ "$OPTION" == "help" ]; then
-      echo "Usage: cast toggle-updates <option>"
+      echo "${blue}Usage: cast toggle-updates ${magenta}<option>${normal}"
       echo "  <option>: Specify the quick option - 'enable' or 'disable'"
       echo "  Use 'enable' to Enable automatic updates."
       echo "  Use 'disable' to Disable automatic updates."
@@ -71,18 +72,19 @@ clean-system:
 # toggles password prompt feedback in terminal, where sudo password prompts will display asterisks when enabled
 toggle-password-feedback ACTION="":
     #!/usr/bin/bash
+    source /usr/lib/cast/cast.sh
     PWFEEDBACK_FILE="/etc/sudoers.d/enable-pwfeedback"
     OPTION={{ ACTION }}
     if [ "$OPTION" = "on" ]; then
       echo 'Defaults pwfeedback' | sudo tee $PWFEEDBACK_FILE
-      echo "enabled, restart terminal to see changes"
+      echo "${green}enabled${normal}, restart terminal to see changes"
     elif [ "$OPTION" = "off" ]; then
       sudo rm -f $PWFEEDBACK_FILE
-      echo "disabled pwfeedback. restart your terminal to see changes"
+      echo "${red}disabled${normal} pwfeedback. restart your terminal to see changes"
     elif sudo test -f $PWFEEDBACK_FILE; then
       sudo rm -f $PWFEEDBACK_FILE
-      echo "disabled pwfeedback. restart your terminal to see changes"
+      echo "${red}disabled${normal} pwfeedback. restart your terminal to see changes"
     else
       echo 'Defaults pwfeedback' | sudo tee $PWFEEDBACK_FILE
-      echo "enabled, restart terminal to see changes"
+      echo "${green}enabled${normal}, restart terminal to see changes"
     fi

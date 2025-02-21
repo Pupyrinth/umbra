@@ -1,12 +1,12 @@
 #!/usr/bin/bash
 # shellcheck source=/dev/null
 # Import color formatting
-source /usr/lib/ujust/libcolors.sh
+source /usr/lib/cast/libcolors.sh
 # Import text formatting
-source /usr/lib/ujust/libformatting.sh
+source /usr/lib/cast/libformatting.sh
 # Import functionality for just
-source /usr/lib/ujust/libfunctions.sh
+source /usr/lib/cast/libfunctions.sh
 # Import functionality related to distrobox
-source /usr/lib/ujust/libdistrobox.sh
+source /usr/lib/cast/libdistrobox.sh
 # Import functionality related to toolbox
-source /usr/lib/ujust/libtoolbox.sh
+source /usr/lib/cast/libtoolbox.sh
