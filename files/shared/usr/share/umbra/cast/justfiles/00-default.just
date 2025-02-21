@@ -10,7 +10,7 @@ bios:
 alias upgrade := update
 
 # Update user, system or both
-update choice:
+update choice="":
     #!/usr/bin/bash
     OPTION={{ choice }}
 
