@@ -6,8 +6,8 @@ test ARG:
   source /usr/lib/ujust/ujust.sh
   echo {{ARG}}
 
-bruh option:
-  echo {{ option }}
+bruh ARG:
+  echo {{ARG}}
 
 # Boot into this device's BIOS/UEFI screen
 bios:
