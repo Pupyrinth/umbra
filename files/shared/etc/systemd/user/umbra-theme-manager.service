@@ -3,7 +3,8 @@ Description=Manage system theme
 
 [Service]
 Type=oneshot
-ExecStart=nebula -t
+ExecStartPre=/bin/bash -c 'while [ -z "$DISPLAY" ]; do sleep 1; done'
+ExecStart=/usr/bin/nebula theme-manager --theme "AshyDecay" --icons "Tela-dark" --cursor "Bibata-Modern-Ice" --wallpaper "/usr/share/umbra/wallpapers/tux.jpg"
 Restart=on-failure
 RestartSec=30
 StartLimitInterval=0

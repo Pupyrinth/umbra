@@ -1,7 +1,7 @@
 #ARG BASE_IMAGE=kinoite-main
 #FROM ghcr.io/ublue-os/${BASE_IMAGE}:latest
 #FROM quay.io/fedora-ostree-desktops/kinoite:41
-FROM ghcr.io/alxhr0/horizon-base:latest
+FROM ghcr.io/alxhr0/horizon-asteroid:latest
 
 COPY scripts/shared/build.sh /tmp/shared-build.sh
 COPY editions/plasma/build.sh /tmp/build.sh

@@ -15,12 +15,12 @@ update choice="":
     OPTION={{ choice }}
 
     if [ "${OPTION,,}" == "user" ]; then
-      nebula -u
+      nebula update-system
     elif [ "${OPTION,,}" == "system" ]; then
-      sudo nebula -u
+      sudo nebula update-system
     elif [ "${OPTION,,}" == "both" ]; then
-      sudo nebula -u
-      nebula -u
+      sudo nebula update-system
+      nebula update-system
     else
       echo "Usage: cast update <option>"
       echo "  <option>: Specify the quick option - 'user' or 'system' or 'all'"
