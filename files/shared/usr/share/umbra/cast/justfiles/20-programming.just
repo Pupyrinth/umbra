@@ -14,7 +14,7 @@ rustup choice="prompt":
     echo "Install or Remove rustup?"
     OPTION=$(ugum choose Install Remove)
   elif [ "$OPTION" == "help" ]; then
-    echo "${blue}Usage: cast rustup ${magenta}<option>${normal}"
+    echo "Usage: cast rustup <option>"
     echo "  <option>: Specify the quick option - 'install' or 'remove'"
     echo "  Use 'install' to Install rustup."
     echo "  Use 'remove' to Remove rustup."
@@ -23,14 +23,14 @@ rustup choice="prompt":
 
   if [ "${OPTION,,}" == "install" ]; then
     if [ "${CURRENT_STATE}" == "Installed" ]; then
-      echo "${yellow}Rustup is already installed.${normal}"
+      echo "Rustup is already installed."
       exit 0
     else
       curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
     fi
   elif [ "${OPTION,,}" == "remove" ]; then
     if [ "${CURRENT_STATE}" == "Not Installed" ]; then
-      echo "${yellow}Rustup is not on the system.${normal}"
+      echo "Rustup is not on the system."
       exit 0
     else
       rustup self uninstall -y
