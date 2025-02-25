@@ -20,11 +20,7 @@ dnf5 copr -y enable sentry/kernel-blu
 
 dnf5 -y config-manager addrepo --from-repofile=https://negativo17.org/repos/fedora-steam.repo
 
-if grep -q "plasma" /usr/share/umbra/image_type; then
-    rpm-ostree override remove libpostproc-free libswresample-free libavcodec-free libavformat-free libavutil-free libavfilter-free libswscale-free --install ffmpeg
-else
-    dnf5 -y install ffmpeg
-fi
+dnf5 -y install ffmpeg
 
 #rpm-ostree override remove libavdevice-free ffmpeg-free libavcodec-free libavfilter-free libavformat-free libavutil-free libpostproc-free libswresample-free libswscale-free --install ffmpeg
 
