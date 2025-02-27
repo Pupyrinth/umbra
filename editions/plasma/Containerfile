@@ -10,7 +10,7 @@ COPY files/shared /
 COPY files/plasma /
 
 RUN mkdir -p /var/lib/alternatives && \
-    echo "plasma" >> /usr/share/umbra/image_type && \
+    echo "umbra-plasma" >> /usr/share/umbra/image_type && \
     /tmp/shared-build.sh && \
     /tmp/build.sh && \
     ostree container commit
