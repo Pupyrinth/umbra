@@ -35,6 +35,7 @@ dnf5 -y --setopt=install_weak_deps=False install steam gamemode lutris waydroid 
 
 systemctl enable podman.socket
 systemctl enable libvirtd.service
+systemctl enable disable-audit.service
 systemctl enable umbra-update.timer
 systemctl enable umbra-flatpak-manager.service
 systemctl enable --global umbra-theme-manager.service
