@@ -14,7 +14,7 @@
 #current_status=$(get_status)
 
 # Disable Audit
-rpm-ostree kargs --replace "audit=0"
+#rpm-ostree kargs --replace "audit=0"
 
 # Disable systemd serivce
-systemctl disable disable-audit
+#systemctl disable disable-audit
