@@ -15,7 +15,7 @@ runtime/com.obsproject.Studio.Plugin.GStreamerVaapi/x86_64/stable
 runtime/org.gtk.Gtk3theme.adw-gtk3/x86_64/3.22
 runtime/org.gtk.Gtk3theme.adw-gtk3-dark/x86_64/3.22
 
-app/io.gitlab.librewolf-community
+app/io.gitlab.librewolf-community/x86_64/stable
 app/dev.vencord.Vesktop/x86_64/stable
 app/org.prismlauncher.PrismLauncher/x86_64/stable
 app/org.ferdium.Ferdium/x86_64/stable
@@ -24,3 +24,5 @@ app/org.gimp.GIMP/x86_64/stable
 app/org.gnome.World.PikaBackup/x86_64/stable
 app/com.vysp3r.ProtonPlus/x86_64/stable
 app/org.libreoffice.LibreOffice/x86_64/stable
+app/com.stremio.Stremio/x86_64/stable
+apps/io.itch.itch/x86_64/stable
