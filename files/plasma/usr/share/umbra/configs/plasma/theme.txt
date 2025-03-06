@@ -1,3 +1,0 @@
-theme: AshyDecay
-icons: Bibata-Modern-Ice
-wallpaper: /usr/share/umbra/wallpapers/tux.jpg
