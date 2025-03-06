@@ -2,7 +2,8 @@
 #FROM ghcr.io/ublue-os/${BASE_IMAGE}:latest
 #FROM quay.io/fedora-ostree-desktops/kinoite:41
 #FROM ghcr.io/alxhr0/horizon-asteroid:latest
-FROM ghcr.io/ublue-os/silverblue-main:latest
+#FROM ghcr.io/ublue-os/silverblue-main:latest
+FROM quay.io/fedora-ostree-desktops/silverblue:41
 
 COPY scripts/shared/build.sh /tmp/shared-build.sh
 COPY editions/gnome/build.sh /tmp/build.sh
