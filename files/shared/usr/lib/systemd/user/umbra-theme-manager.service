@@ -3,7 +3,8 @@ Description=Manage system theme
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/nebula themes set-plasma AshyDecay breeze-dark Breeze_Light /usr/share/umbra/wallpapers/tux.jpg
+#ExecStart=/usr/bin/nebula themes set-gnome <icons> <wallpaper-dark> <wallpaper-light> <cursor> <theme> <dconf_path>
+ExecStart=/usr/bin/nebula themes set-gnome Papirus-Dark /usr/share/umbra/wallpapers/tux.jpg /usr/share/umbra/wallpapers/tux.jpg Sweet-cursors Catppuccin-Dark-BL-MB
 Restart=on-failure
 RestartSec=30
 StartLimitInterval=0
