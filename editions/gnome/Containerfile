@@ -3,7 +3,7 @@
 #FROM quay.io/fedora-ostree-desktops/kinoite:41
 #FROM ghcr.io/alxhr0/horizon-asteroid:latest
 #FROM ghcr.io/ublue-os/silverblue-main:latest
-FROM quay.io/fedora-ostree-desktops/silverblue:41
+FROM quay.io/fedora-ostree-desktops/silverblue:42
 
 COPY scripts/shared/build.sh /tmp/shared-build.sh
 COPY editions/gnome/build.sh /tmp/build.sh
@@ -11,8 +11,8 @@ COPY editions/gnome/build.sh /tmp/build.sh
 COPY files/shared /
 COPY files/gnome /
 
-RUN mkdir -p /var/lib/alternatives && \
-    echo "umbra-gnome" >> /usr/share/umbra/image_type && \
-    /tmp/shared-build.sh && \
-    /tmp/build.sh && \
-    ostree container commit
+RUN mkdir -p /var/lib/alternatives
+RUN ehco "umbra-gnome" >> /usr/share/umbra/image_type
+RUN /tmp/shared-build.sh
+RUN /tmp/build.sh
+RUN ostree container commit

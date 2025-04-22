@@ -11,7 +11,8 @@ There will eventually be an ISO, but for now you'll need to rebase.
 # Rebase
 
 From Silverblue/Kinoite/any:
+
 ```bash
-# KDE Plasma 
-sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/aethrexal/umbra:latest
+# Gnome
+sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/pupyrinth/umbra:latest
 ```
