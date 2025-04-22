@@ -12,7 +12,7 @@ COPY files/shared /
 COPY files/gnome /
 
 RUN mkdir -p /var/lib/alternatives
-RUN ehco "umbra-gnome" >> /usr/share/umbra/image_type
+RUN echo "umbra-gnome" >> /usr/share/umbra/image_type
 RUN /tmp/shared-build.sh
 RUN /tmp/build.sh
 RUN ostree container commit
