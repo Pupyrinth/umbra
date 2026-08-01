@@ -4,7 +4,9 @@
 type: dnf
 repos:
   cleanup: true
-  # copr:
+  copr:
+    enable:
+      - scottames/ghostty
 install:
   packages:
     - zsh
