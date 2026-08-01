@@ -1,0 +1,24 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
+
+type: default-flatpaks
+configurations:
+  - notify: true # Send notification after install/uninstall is finished (true/false)
+    scope: system
+    # If no repo information is specified, Flathub will be used by default
+    install: # system flatpaks we want all users to have and not remove
+      - io.github.kolunmi.Bazaar
+      - com.github.tchx84.Flatseal
+      - it.mijorus.gearlever
+      - com.vysp3r.ProtonPlus
+      - com.rafaelmardojai.Blanket
+      - com.bitwarden.desktop
+      - net.blockbench.Blockbench
+      - io.itch.itch
+      - org.localsend.localsend_app
+      - org.prismlauncher.PrismLauncher
+      - com.core447.StreamController
+      - com.stremio.Stremio
+      - org.telegram.desktop
+      - org.mozilla.thunderbird
+  - scope: user # Also add Flathub user repo, but no user packages
